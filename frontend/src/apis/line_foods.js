@@ -26,3 +26,12 @@ export const replaceLineFoods = (params) => {
   })
   .catch((e) => { throw e; })
 };
+
+export const fetchLineFoods = async() => {
+  return await axios.get(lineFoods)
+  .then(res => {
+    return res.data
+  })
+  //throwで例外をあげるとcatchに入る
+  .catch((e) => { throw e; })
+};
